@@ -1,0 +1,21 @@
+//Fonts
+$fontFamilyPrimary: "Poppins", sans-serif;
+$fontFamilySecondary: "Montserrat", sans-serif;
+
+//Colors
+$BackgroundColor: #A9B388;
+$Titles: #A2282E;
+$Text: #F5E6D8;
+$Optional: #C87620;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: $fontFamilyPrimary;
+}
