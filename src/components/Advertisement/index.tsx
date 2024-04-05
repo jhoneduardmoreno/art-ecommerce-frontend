@@ -1,5 +1,5 @@
 
-export const Advertisment = () => {
+export const Advertisement = () => {
   return (
     <div>Advertisment</div>
   )

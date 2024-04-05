@@ -1,9 +1,9 @@
-import { Advertisment } from "../../components/Advertisement";
+import { Advertisement } from "../../components/Advertisement";
 
 const HomePage = () => {
     return (
         <>
-            <Advertisment />
+            <Advertisement />
         </>
     );
 }
