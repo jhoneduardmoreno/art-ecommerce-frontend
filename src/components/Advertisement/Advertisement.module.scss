@@ -1,13 +1,20 @@
 @import '../../index.scss';
 
+.advertisement {
+  background-color: $Optional;
+  padding: 2rem 0;
 
-.advertisement{
-    background-color: $Optional;
-    padding: 2rem 0;
-    p{
-        font-size: 1.5rem;
-        text-align: center;
-        color: $Text;
-        font-weight: bold;
-    }
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: $Text;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .fade {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 }
