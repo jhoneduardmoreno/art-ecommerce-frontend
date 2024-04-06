@@ -2,7 +2,11 @@ import { useState, useEffect } from 'react';
 import styles from './Advertisement.module.scss';
 
 export const Advertisement = () => {
-  const [text, setText] = useState('Conoce los proyectos de Ismara Dayana');
+
+  const text1 = 'Conoce los proyectos de Ismara Dayana';
+  const text2 = 'Conoce la nueva colección';
+
+  const [text, setText] = useState(text1);
   const [fade, setFade] = useState(false);
 
   useEffect(() => {
@@ -10,9 +14,9 @@ export const Advertisement = () => {
       setFade(true); // Start the fade
       setTimeout(() => {
         setText((currentText) =>
-          currentText === 'Conoce los proyectos de Ismara Dayana'
-            ? 'Conoce la nueva colección'
-            : 'Conoce los proyectos de Ismara Dayana'
+          currentText === text1
+            ? text2
+            : text1
         );
         setFade(false); // Reset fade state for the next cycle
       }, 500); // Change the text after 0.5 seconds
