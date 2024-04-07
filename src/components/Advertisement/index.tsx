@@ -41,7 +41,7 @@ export const Advertisement = () => {
             rel="noopener noreferrer"
             aria-label="Instagram"
           >
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
+            <FontAwesomeIcon icon={faInstagram} size="2x" className={styles.iconsColor} />
           </a>
           <a 
             href="https://www.tiktok.com/@tuNombreDeUsuario"
@@ -49,7 +49,7 @@ export const Advertisement = () => {
             rel="noopener noreferrer"
             aria-label="TikTok"
           >
-            <FontAwesomeIcon icon={faTiktok} size="2x" />
+            <FontAwesomeIcon icon={faTiktok} size="2x" className={styles.iconsColor} />
           </a>
         </div>
       }
