@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './Advertisement.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
-import { useMediaQuery, Drawer, IconButton, List, ListItemButton, ListItemText } from '@mui/material';
+import { useMediaQuery } from '@mui/material';
 
 export const Advertisement = () => {
 
@@ -33,25 +33,29 @@ export const Advertisement = () => {
 
   return (
     <div className={classNameAdvertisement}>
-      <div>
-        <a 
-          href="https://www.instagram.com/arteconmara/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
-          <FontAwesomeIcon icon={faInstagram} size="2x" />
-        </a>
-        <a 
-          href="https://www.tiktok.com/@tuNombreDeUsuario"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="TikTok"
-        >
-          <FontAwesomeIcon icon={faTiktok} size="2x" />
-        </a>
+      {isDesktop &&
+        <div className={styles.iconContainer}>
+          <a 
+            href="https://www.instagram.com/arteconmara/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
+          </a>
+          <a 
+            href="https://www.tiktok.com/@tuNombreDeUsuario"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+          >
+            <FontAwesomeIcon icon={faTiktok} size="2x" />
+          </a>
+        </div>
+      }
+      <div className={styles.textContainer}>
+        <p className={`${styles.text} ${fade ? styles.fade : ''}`}>{text}</p>
       </div>
-      <p className={`${fade ? styles.fade : ''}`}>{text}</p>
     </div>
   );
 };

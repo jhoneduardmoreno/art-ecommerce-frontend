@@ -4,13 +4,20 @@
   background-color: $Optional;
   padding: 2rem 0;
 
-  p {
-    font-size: 1.5rem;
-    text-align: center;
-    color: $Text;
-    font-weight: bold;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  
+  .textContainer {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    
+    .text {
+      font-size: 1.5rem;
+      text-align: center;
+      color: $Text;
+      font-weight: bold;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
   }
 
   .fade {
@@ -22,4 +29,15 @@
 .advertisementDesktop {
   display: flex;
   justify-content: space-between;
+  align-items: center; 
+
+  .iconContainer{
+    margin-left: 2rem;
+  }
+
+  
+  .textContainer {
+    display: flex;
+    justify-content: center; 
+  }
 }
