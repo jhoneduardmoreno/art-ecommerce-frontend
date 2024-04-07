@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Advertisement.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { useMediaQuery, Drawer, IconButton, List, ListItemButton, ListItemText } from '@mui/material';
 
 export const Advertisement = () => {
@@ -29,8 +29,10 @@ export const Advertisement = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const classNameAdvertisement = isDesktop ? `${styles.advertisement} ${styles.advertisementDesktop}` : styles.advertisement;
+
   return (
-    <div className={styles.advertisement}>
+    <div className={classNameAdvertisement}>
       <div>
         <a 
           href="https://www.instagram.com/arteconmara/"
@@ -39,6 +41,14 @@ export const Advertisement = () => {
           aria-label="Instagram"
         >
           <FontAwesomeIcon icon={faInstagram} size="2x" />
+        </a>
+        <a 
+          href="https://www.tiktok.com/@tuNombreDeUsuario"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <FontAwesomeIcon icon={faTiktok} size="2x" />
         </a>
       </div>
       <p className={`${fade ? styles.fade : ''}`}>{text}</p>
