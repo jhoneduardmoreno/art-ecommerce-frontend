@@ -34,7 +34,7 @@ export const Advertisement = () => {
   return (
     <div className={classNameAdvertisement}>
       {isDesktop &&
-        <div className={styles.iconContainer}>
+        <div className={styles.iconsContainer}>
           <a 
             href="https://www.instagram.com/arteconmara/"
             target="_blank"
