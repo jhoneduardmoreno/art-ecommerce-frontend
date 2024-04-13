@@ -19,3 +19,10 @@ html {
     font-size: 62.5%;
     font-family: $fontFamilyPrimary;
 }
+
+// Responsive Images
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}

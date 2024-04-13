@@ -10,18 +10,9 @@ interface PassportImage {
 }
 
 const passportImages: PassportImage[] = [
-  {
-    id: 1,
-    url: art1,
-  },
-  {
-    id: 2,
-    url: art2,
-  },
-  {
-    id: 3,
-    url: art3,
-  },
+  { id: 1, url: art1 },
+  { id: 2, url: art2 },
+  { id: 3, url: art3 },
 ];
 
 const Slider: React.FC = () => {
@@ -44,8 +35,8 @@ const Slider: React.FC = () => {
       <div
         style={{
           position: 'relative',
-          width: 300,
-          height: 200,
+          width: '100%',
+          paddingTop: '66.67%',
           overflow: 'hidden',
         }}
       >
@@ -62,6 +53,8 @@ const Slider: React.FC = () => {
               alt={`Passport ${image.id}`}
               style={{
                 position: 'absolute',
+                top: 0,
+                left: 0,
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
