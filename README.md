@@ -52,3 +52,7 @@ You can reach out to us through the following channels:
 
 - Email: [jhoneduar1994@hotmail.com](mailto:jhoneduar1994@hotmail.com)
 - LinkedIn: [linkedin.com/in/jhoneduardmoreno/](https://www.linkedin.com/in/jhoneduardmoreno/)
+
+## Project Status
+
+This project is still active development. I am actively working on adding new features and improving existing ones. Stay tuned for updates!
