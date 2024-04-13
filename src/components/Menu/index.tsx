@@ -10,7 +10,7 @@ export const Menu = () => {
             <MenuIcon sx={{fontSize: '3rem', color: '#000'}} />
         </IconButton>
         <div className={styles.logo}>
-            ISMARA DAYANA REINELL
+            ARTECONMARA
         </div>
         <IconButton onClick={() => console.log('Opening cart')}>
             <ShoppingCartIcon sx={{fontSize: '2.3rem', color: '#000'}} />
