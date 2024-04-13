@@ -1,4 +1,4 @@
-# Project Name
+# Project Description
 
 art e-commerce project created with React, TypeScript, and Material UI. This project aims to provide a user-friendly and visually appealing interface for online shopping. It utilizes the power of React to create dynamic and interactive components, TypeScript for type safety and enhanced developer experience, and Material UI for a modern and responsive design. With this project, you can easily build and customize an e-commerce website that meets your specific requirements.
 
