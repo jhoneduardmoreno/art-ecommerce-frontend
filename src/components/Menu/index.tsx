@@ -5,7 +5,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 export const Menu = () => {
   return (
-    <div>
+    <div className={styles.container}>
         <IconButton onClick={() => console.log('Opening menu')}>
             <MenuIcon sx={{fontSize: '3rem', color: '#000'}} />
         </IconButton>
@@ -13,7 +13,7 @@ export const Menu = () => {
             ISMARA DAYANA REINELL
         </div>
         <IconButton onClick={() => console.log('Opening cart')}>
-            <ShoppingCartIcon sx={{fontSize: '3rem', color: '#000'}} />
+            <ShoppingCartIcon sx={{fontSize: '2.3rem', color: '#000'}} />
         </IconButton>
     </div>
   )
