@@ -7,7 +7,7 @@ art e-commerce project created with React, TypeScript, and Material UI. This pro
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+- [Contact](#contact)
 
 ## Installation
 
@@ -23,7 +23,7 @@ npm install
 
 ## Usage
 
-To run the project on localhost:5173, Run the following command:
+To run the project on localhost:5173, use the following command:
 
 ```bash
 npm run dev
@@ -33,12 +33,22 @@ This will start the development server and the project will be accessible at htt
 
 ## Contributing
 
-Guidelines for contributing to the project and how others can get involved.
+Thank you for considering contributing to this project! To ensure a smooth collaboration, please follow these guidelines:
 
-## License
+1. Fork the repository and create your own branch for your contributions.
+2. Make sure your code follows the project's coding style and conventions.
+3. Write clear and concise commit messages.
+4. Test your changes thoroughly before submitting a pull request.
+5. Provide a detailed description of your changes in the pull request.
+6. Be respectful and considerate towards other contributors.
 
-Information about the project's license and any additional terms or conditions.
+We appreciate your contributions and look forward to your involvement in making this project even better!
 
 ## Contact
 
 How to get in touch with the project maintainer or team.
+
+You can reach out to us through the following channels:
+
+- Email: [jhoneduar1994@hotmail.com](mailto:jhoneduar1994@hotmail.com)
+- LinkedIn: [linkedin.com/in/jhoneduardmoreno/](https://www.linkedin.com/in/jhoneduardmoreno/)
