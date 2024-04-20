@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import art1 from '../../assets/art1.jpg';
 import art2 from '../../assets/art2.jpg';
 import art3 from '../../assets/art3.jpg';
+import styles from "./Slider.module.scss";
 
 const Slider: React.FC = () => {
     const passportImages = [
@@ -24,11 +25,11 @@ const Slider: React.FC = () => {
       >
         {passportImages.map((image) => (
           <SwiperSlide key={image.id}>
-            <div style={{ width: '100%', height: '700px', overflow: 'hidden' }}>
+            <div className={styles.containerImageSlider}>
               <img
                 src={image.url}
                 alt={`Passport ${image.id}`}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                className={styles.imageSlider}
               />
             </div>
           </SwiperSlide>
