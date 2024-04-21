@@ -30,7 +30,7 @@ export const Menu = () => {
         <Box sx={{ width: 250, padding: '1rem' }}>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
             <IconButton onClick={handleCloseMenu}>
-              <CloseIcon />
+              <CloseIcon sx={{ fontSize: '2rem', color: '#000' }}/>
             </IconButton>
           </Box>
           <Typography variant="h6" sx={{ marginBottom: '1rem' }}>
