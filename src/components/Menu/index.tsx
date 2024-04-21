@@ -16,6 +16,26 @@ export const Menu = () => {
     setOpenMenu(false);
   };
 
+  const MenuItems = [
+    {
+      id: 1,
+      icon: <ShoppingCartIcon />,
+      name: 'Productos',
+      path: '/',
+      subItems: [
+        { id: 1, name: 'Estuches', path: '/' },
+        { id: 1, name: 'Retratos', path: '/' },
+        { id: 1, name: 'Accesorios para el hogar', path: '/' },
+      ]
+    },
+    {
+      id: 2,
+      icon: <ShoppingCartIcon />,
+      name: 'Proyectos',
+      path: '/',
+    },
+  ]
+
   return (
     <div className={styles.container}>
       <IconButton onClick={handleOpenMenu}>
