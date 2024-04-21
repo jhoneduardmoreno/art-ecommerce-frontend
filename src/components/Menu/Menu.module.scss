@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .logo{
     font-weight: bold;
     font-size: 15px;
@@ -13,5 +15,5 @@
     align-items: center;
     padding: 1rem 1.5rem;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: $MenuBackground; 
 }
