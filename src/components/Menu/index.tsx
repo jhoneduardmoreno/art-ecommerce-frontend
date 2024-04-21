@@ -59,7 +59,7 @@ export const Menu = () => {
           {MenuItems.map((item) => (
             <div key={item.id}>
               {item.subItems ? (
-                <Accordion>
+                <Accordion sx={{ boxShadow: 'none', border: 'none' }}>
                   <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                     <ListItemIcon>{item.icon}</ListItemIcon>
                     <Typography>{item.name}</Typography>
