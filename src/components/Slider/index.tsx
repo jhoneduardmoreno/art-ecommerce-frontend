@@ -17,24 +17,26 @@ const Slider: React.FC = () => {
     ];
   
     return (
-      <Swiper
-        modules={[Pagination, Autoplay]}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
-      >
-        {passportImages.map((image) => (
-          <SwiperSlide key={image.id}>
-            <div className={styles.containerImageSlider}>
-              <img
-                src={image.url}
-                alt={`Passport ${image.id}`}
-                className={styles.imageSlider}
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className={styles.sliderContainer}>
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000 }}
+        >
+          {passportImages.map((image) => (
+            <SwiperSlide key={image.id}>
+              <div className={styles.containerImageSlider}>
+                <img
+                  src={image.url}
+                  alt={`Passport ${image.id}`}
+                  className={styles.imageSlider}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     );
   };
   
