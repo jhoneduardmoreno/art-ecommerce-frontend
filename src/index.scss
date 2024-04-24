@@ -9,11 +9,15 @@ $Text: #F5E6D8;
 $Optional: #C87620;
 $MenuBackground: #f5e6d89c;
 
+// Default font size
+$defaultFontSize: 1.6rem;
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: $defaultFontSize;
 }
 
 html {

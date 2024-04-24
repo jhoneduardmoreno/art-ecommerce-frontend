@@ -1,11 +1,12 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton, Drawer, Box, Typography, Accordion, AccordionSummary, AccordionDetails, List, ListItem, ListItemText, ListItemIcon } from '@mui/material';
 import styles from './Menu.module.scss';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Link } from 'react-router-dom';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import HomeIcon from '@mui/icons-material/Home';
 
 export const Menu = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -21,6 +22,12 @@ export const Menu = () => {
   const MenuItems = [
     {
       id: 1,
+      icon: <HomeIcon />,
+      name: 'Inicio',
+      path: '/',
+    },
+    {
+      id: 2,
       icon: <ShoppingCartIcon />,
       name: 'Productos',
       path: '/',
@@ -29,12 +36,6 @@ export const Menu = () => {
         { id: 2, name: 'Retratos', path: '/' },
         { id: 3, name: 'Accesorios para el hogar', path: '/' },
       ],
-    },
-    {
-      id: 2,
-      icon: <ShoppingCartIcon />,
-      name: 'Proyectos',
-      path: '/',
     },
   ];
 
