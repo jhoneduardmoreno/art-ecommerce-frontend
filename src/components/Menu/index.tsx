@@ -86,7 +86,7 @@ export const Menu = () => {
                     <ListItemIcon>{item.icon}</ListItemIcon>
                     <Typography sx={textItemsStyles}>{item.name}</Typography>
                   </AccordionSummary>
-                  <AccordionDetails sx={{padding: '0 0 0 5.7rem'}}>
+                  <AccordionDetails sx={{padding: '0'}}>
                     <List>
                       {item.subItems.map((subItem) => (
                         <ListItem 
