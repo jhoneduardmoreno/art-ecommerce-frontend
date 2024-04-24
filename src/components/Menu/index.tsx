@@ -66,8 +66,16 @@ export const Menu = () => {
       </IconButton>
       <div className={styles.logo}>ARTECONMARA</div>
       <IconButton onClick={() => console.log('Opening cart')}>
-        <Badge badgeContent={cartItemCount} color="primary">
-          <ShoppingCartIcon sx={{ fontSize: '2.3rem', color: '#000' }} />
+        <Badge 
+          badgeContent={cartItemCount} 
+          sx={{
+            '& .MuiBadge-badge': {
+              backgroundColor: '#7D3586',
+              color: '#fff',
+            },
+          }}
+        >
+          <ShoppingCartOutlinedIcon sx={{ fontSize: '2.3rem', color: '#000' }} />
         </Badge>
       </IconButton>
 
