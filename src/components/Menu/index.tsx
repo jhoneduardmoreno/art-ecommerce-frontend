@@ -29,6 +29,12 @@ export const Menu = () => {
     fontSize: '1.8rem',
   }
 
+  const menuItemStyles = {
+    '&:hover': {
+      backgroundColor: '#f0f0f0',
+    },
+  };
+
   const MenuItems = [
     {
       id: 1,
@@ -73,14 +79,22 @@ export const Menu = () => {
             <div key={item.id}>
               {item.subItems ? (
                 <Accordion sx={{ boxShadow: 'none', border: 'none' }}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <AccordionSummary 
+                    expandIcon={<ExpandMoreIcon />}
+                    sx={menuItemStyles}
+                  >
                     <ListItemIcon>{item.icon}</ListItemIcon>
                     <Typography sx={textItemsStyles}>{item.name}</Typography>
                   </AccordionSummary>
                   <AccordionDetails sx={{padding: '0 0 0 5.7rem'}}>
                     <List>
                       {item.subItems.map((subItem) => (
-                        <ListItem key={subItem.id} component={Link} to={subItem.path}  >
+                        <ListItem 
+                          key={subItem.id} 
+                          component={Link} 
+                          to={subItem.path}
+                          sx={menuItemStyles} 
+                        >
                           <ListItemText
                             primary={
                               <Typography sx={textItemsStyles}>
@@ -94,7 +108,11 @@ export const Menu = () => {
                   </AccordionDetails>
                 </Accordion>
               ) : (
-                <ListItem component={Link} to={item.path}>
+                <ListItem 
+                  component={Link} 
+                  to={item.path}
+                  sx={menuItemStyles} 
+                >
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText 
                     primary={
