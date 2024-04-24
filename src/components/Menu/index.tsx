@@ -19,16 +19,26 @@ export const Menu = () => {
     setOpenMenu(false);
   };
 
+  const textItemsStyles = {
+    fontSize: '1.4rem',
+    fontFamily: '"Poppins", sans-serif;',
+    color: '#000',
+  };
+
+  const iconItemsStyles = {
+    fontSize: '1.8rem',
+  }
+
   const MenuItems = [
     {
       id: 1,
-      icon: <HomeIcon />,
+      icon: <HomeIcon sx={iconItemsStyles} />,
       name: 'Inicio',
       path: '/',
     },
     {
       id: 2,
-      icon: <ShoppingCartIcon />,
+      icon: <ShoppingCartIcon sx={iconItemsStyles}  />,
       name: 'Productos',
       path: '/',
       subItems: [
@@ -39,15 +49,7 @@ export const Menu = () => {
     },
   ];
 
-  const textItemsStyles = {
-    fontSize: '1.4rem',
-    fontFamily: '"Poppins", sans-serif;',
-    color: '#000',
-  };
-
-  const iconItemsStyles = {
-    fontSize: '1.4rem',
-  }
+  
 
   return (
     <div className={styles.container}>
@@ -72,7 +74,7 @@ export const Menu = () => {
               {item.subItems ? (
                 <Accordion sx={{ boxShadow: 'none', border: 'none' }}>
                   <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <ListItemIcon sx={iconItemsStyles}>{item.icon}</ListItemIcon>
+                    <ListItemIcon>{item.icon}</ListItemIcon>
                     <Typography sx={textItemsStyles}>{item.name}</Typography>
                   </AccordionSummary>
                   <AccordionDetails sx={{padding: '0 0 0 5.7rem'}}>
@@ -93,7 +95,7 @@ export const Menu = () => {
                 </Accordion>
               ) : (
                 <ListItem component={Link} to={item.path}>
-                  <ListItemIcon sx={iconItemsStyles}>{item.icon}</ListItemIcon>
+                  <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText 
                     primary={
                       <Typography sx={textItemsStyles}>
