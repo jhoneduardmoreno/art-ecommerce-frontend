@@ -6,7 +6,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import HomeIcon from '@mui/icons-material/Home';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 export const Menu = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -38,13 +39,13 @@ export const Menu = () => {
   const MenuItems = [
     {
       id: 1,
-      icon: <HomeIcon sx={iconItemsStyles} />,
+      icon: <HomeOutlinedIcon sx={iconItemsStyles} />,
       name: 'Inicio',
       path: '/',
     },
     {
       id: 2,
-      icon: <ShoppingCartIcon sx={iconItemsStyles}  />,
+      icon: <ShoppingCartOutlinedIcon sx={iconItemsStyles}  />,
       name: 'Productos',
       path: '/',
       subItems: [
