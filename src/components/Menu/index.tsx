@@ -39,6 +39,16 @@ export const Menu = () => {
     },
   ];
 
+  const textItemsStyles = {
+    fontSize: '1.4rem',
+    fontFamily: '"Poppins", sans-serif;',
+    color: '#000',
+  };
+
+  const iconItemsStyles = {
+    fontSize: '1.4rem',
+  }
+
   return (
     <div className={styles.container}>
       <IconButton onClick={handleOpenMenu}>
@@ -62,14 +72,20 @@ export const Menu = () => {
               {item.subItems ? (
                 <Accordion sx={{ boxShadow: 'none', border: 'none' }}>
                   <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <ListItemIcon>{item.icon}</ListItemIcon>
-                    <Typography>{item.name}</Typography>
+                    <ListItemIcon sx={iconItemsStyles}>{item.icon}</ListItemIcon>
+                    <Typography sx={textItemsStyles}>{item.name}</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <List>
                       {item.subItems.map((subItem) => (
-                        <ListItem key={subItem.id} component={Link} to={subItem.path}>
-                          <ListItemText primary={subItem.name} />
+                        <ListItem key={subItem.id} component={Link} to={subItem.path}  >
+                          <ListItemText
+                            primary={
+                              <Typography sx={textItemsStyles}>
+                                {subItem.name}
+                              </Typography>
+                            }
+                          />
                         </ListItem>
                       ))}
                     </List>
@@ -77,8 +93,14 @@ export const Menu = () => {
                 </Accordion>
               ) : (
                 <ListItem component={Link} to={item.path}>
-                  <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.name} />
+                  <ListItemIcon sx={iconItemsStyles}>{item.icon}</ListItemIcon>
+                  <ListItemText 
+                    primary={
+                      <Typography sx={textItemsStyles}>
+                        {item.name}
+                      </Typography>
+                    } 
+                  />
                 </ListItem>
               )}
             </div>
