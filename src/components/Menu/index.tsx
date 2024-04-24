@@ -1,5 +1,5 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton, Drawer, Box, Typography, Accordion, AccordionSummary, AccordionDetails, List, ListItem, ListItemText, ListItemIcon } from '@mui/material';
+import { IconButton, Drawer, Box, Typography, Accordion, AccordionSummary, AccordionDetails, List, ListItem, ListItemText, ListItemIcon, Badge } from '@mui/material';
 import styles from './Menu.module.scss';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
@@ -11,6 +11,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 export const Menu = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [cartItemCount, setCartItemCount] = useState(2);
 
   const handleOpenMenu = () => {
     setOpenMenu(true);
@@ -65,7 +66,9 @@ export const Menu = () => {
       </IconButton>
       <div className={styles.logo}>ARTECONMARA</div>
       <IconButton onClick={() => console.log('Opening cart')}>
-        <ShoppingCartIcon sx={{ fontSize: '2.3rem', color: '#000' }} />
+        <Badge badgeContent={cartItemCount} color="primary">
+          <ShoppingCartIcon sx={{ fontSize: '2.3rem', color: '#000' }} />
+        </Badge>
       </IconButton>
 
       <Drawer anchor="left" open={openMenu} onClose={handleCloseMenu}>
