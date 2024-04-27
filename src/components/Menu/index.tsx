@@ -67,7 +67,13 @@ export const Menu = () => {
       { 
         isDesktop 
         ? 
-        <div>Hola</div>
+        <div>
+          {MenuItems.map((item) => ( 
+            <div key={item.id}>
+              {item.name}
+            </div>
+          ))}
+        </div>
         :
         <IconButton onClick={handleOpenMenu}>
           <MenuIcon sx={{ fontSize: '3rem', color: '#000' }} />
