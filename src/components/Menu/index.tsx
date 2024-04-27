@@ -69,9 +69,9 @@ export const Menu = () => {
         ? 
         <div className={styles.menuDesktop}>
           {MenuItems.map((item) => ( 
-            <div key={item.id}>
+            <Link to={item.path} key={item.id} className={styles.textMenuDesktop}>
               {item.name}
-            </div>
+            </Link>
           ))}
         </div>
         :
