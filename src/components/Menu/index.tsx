@@ -1,15 +1,17 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton, Drawer, Box, Typography, Accordion, AccordionSummary, AccordionDetails, List, ListItem, ListItemText, ListItemIcon, Badge } from '@mui/material';
+import { IconButton, Drawer, Box, Typography, Accordion, AccordionSummary, AccordionDetails, List, ListItem, ListItemText, ListItemIcon, Badge, useMediaQuery } from '@mui/material';
 import styles from './Menu.module.scss';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Link } from 'react-router-dom';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 export const Menu = () => {
+
+  const isDesktop = useMediaQuery('(min-width:1024px)');
+
   const [openMenu, setOpenMenu] = useState(false);
   const [cartItemCount, setCartItemCount] = useState(2);
 
@@ -61,9 +63,16 @@ export const Menu = () => {
 
   return (
     <div className={styles.container}>
-      <IconButton onClick={handleOpenMenu}>
-        <MenuIcon sx={{ fontSize: '3rem', color: '#000' }} />
-      </IconButton>
+
+      { 
+        isDesktop 
+        ? 
+        <div>Hola</div>
+        :
+        <IconButton onClick={handleOpenMenu}>
+          <MenuIcon sx={{ fontSize: '3rem', color: '#000' }} />
+        </IconButton>
+      }
       <div className={styles.logo}>ARTECONMARA</div>
       <IconButton onClick={() => console.log('Opening cart')}>
         <Badge 
