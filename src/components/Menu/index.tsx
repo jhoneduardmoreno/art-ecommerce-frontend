@@ -67,7 +67,7 @@ export const Menu = () => {
       { 
         isDesktop 
         ? 
-        <div>
+        <div className={styles.menuDesktop}>
           {MenuItems.map((item) => ( 
             <div key={item.id}>
               {item.name}
