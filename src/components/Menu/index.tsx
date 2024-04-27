@@ -79,7 +79,7 @@ export const Menu = () => {
           <MenuIcon sx={{ fontSize: '3rem', color: '#000' }} />
         </IconButton>
       }
-      <div className={styles.logo}>ARTECONMARA</div>
+      <div className={isDesktop ? `${styles.logo} ${styles.logoDesktop}`: styles.logo} >ARTECONMARA</div>
       <IconButton onClick={() => console.log('Opening cart')}>
         <Badge 
           badgeContent={cartItemCount} 
