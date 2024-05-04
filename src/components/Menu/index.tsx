@@ -14,6 +14,7 @@ export const Menu = () => {
 
   const [openMenu, setOpenMenu] = useState(false);
   const [cartItemCount, setCartItemCount] = useState(2);
+  const [openShoppingCart, setOpenShoppingCart] = useState(false);
 
   const handleOpenMenu = () => {
     setOpenMenu(true);
@@ -80,7 +81,7 @@ export const Menu = () => {
         </IconButton>
       }
       <div className={isDesktop ? `${styles.logo} ${styles.logoDesktop}`: styles.logo} >ARTECONMARA</div>
-      <IconButton onClick={() => console.log('Opening cart')}>
+      <IconButton onClick={() => setOpenShoppingCart(true)}>
         <Badge 
           badgeContent={cartItemCount} 
           sx={{
@@ -152,6 +153,17 @@ export const Menu = () => {
               )}
             </div>
           ))}
+        </Box>
+      </Drawer>
+
+      <Drawer anchor="right" open={openShoppingCart} onClose={() => setOpenShoppingCart(false)}>
+        <Box sx={{ width: 250, padding: '1rem' }}>
+          <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <IconButton onClick={() => setOpenShoppingCart(false)}>
+              <CloseIcon sx={{ fontSize: '2rem', color: '#000' }} />
+            </IconButton>
+          </Box>
+          <Typography sx={textItemsStyles}>Carrito de compras</Typography>
         </Box>
       </Drawer>
     </div>
