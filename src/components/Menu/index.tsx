@@ -183,13 +183,12 @@ export const Menu = () => {
               <img src={bagSad} alt="Carrito vacío" className={styles.imageEmptyCar} />
               <Typography sx={textItemsStyles} style={{textAlign: 'center'}}>Tu carrito está vacío</Typography>
               <Button 
-                variant="contained"  
+                variant="contained" 
+                color="primary" 
                 sx={{ 
                   marginTop: '2rem',
-                  backgroundColor: '#7D3586',
                   width: '60%',
                   alignSelf: 'center',
-                  fontFamily: '"Poppins", sans-serif;',
                   fontSize: '1.1rem',
                 }}
                 onClick={() => setOpenShoppingCart(false)}
