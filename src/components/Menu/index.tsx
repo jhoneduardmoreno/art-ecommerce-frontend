@@ -7,6 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Link } from 'react-router-dom';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 export const Menu = () => {
 
@@ -39,6 +40,16 @@ export const Menu = () => {
       backgroundColor: '#f0f0f0',
     },
   };
+
+  const titleShoppingCartStyles = {
+    fontSize: '1.4rem',
+    fontFamily: '"Poppins", sans-serif;',
+    color: '#000',
+    textTransform: 'uppercase',
+    textAlign: 'center',
+    marginTop: '1rem',
+    fontWeight: 'bold',
+  }
 
   const MenuItems = [
     {
@@ -163,7 +174,7 @@ export const Menu = () => {
               <CloseIcon sx={{ fontSize: '2rem', color: '#000' }} />
             </IconButton>
           </Box>
-          <Typography sx={textItemsStyles}>Carrito de compras</Typography>
+          <Typography sx={titleShoppingCartStyles}>Carrito de compras</Typography>
         </Box>
       </Drawer>
     </div>
