@@ -40,4 +40,12 @@
 .imageEmptyCar{
     width: 150px;
     height: 150px;
+    align-self: center;
+}
+
+.contentEmptyCar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
 }

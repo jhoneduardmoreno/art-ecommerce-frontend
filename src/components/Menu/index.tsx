@@ -179,8 +179,9 @@ export const Menu = () => {
           {
             cartItemCount === 0 
             ? 
-            <div>
+            <div className={styles.contentEmptyCar}>
               <img src={bagSad} alt="Carrito vacío" className={styles.imageEmptyCar} />
+              <Typography sx={textItemsStyles} style={{textAlign: 'center'}}>Tu carrito está vacío</Typography>
             </div>
             :
             <div>
