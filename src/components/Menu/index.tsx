@@ -4,7 +4,7 @@ import styles from './Menu.module.scss';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import bagSad from '../../assets/bag-sad.png';
@@ -13,6 +13,7 @@ import bagSad from '../../assets/bag-sad.png';
 export const Menu = () => {
 
   const isDesktop = useMediaQuery('(min-width:1024px)');
+  const navigate = useNavigate();
 
   const [openMenu, setOpenMenu] = useState(false);
   const [cartItemCount, setCartItemCount] = useState(0);
@@ -71,6 +72,11 @@ export const Menu = () => {
       ],
     },
   ];
+
+  const handleGoToStore = () => {
+    navigate('/'); 
+    setOpenShoppingCart(false); 
+  };
 
   
 
@@ -191,7 +197,7 @@ export const Menu = () => {
                   alignSelf: 'center',
                   fontSize: '1.1rem',
                 }}
-                onClick={() => setOpenShoppingCart(false)}
+                onClick={handleGoToStore}
               >
                 Ir a la tienda
               </Button>
