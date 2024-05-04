@@ -7,7 +7,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Link } from 'react-router-dom';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { text } from '@fortawesome/fontawesome-svg-core';
+import bagSad from '../../assets/bag-sad.png';
+
 
 export const Menu = () => {
 
@@ -178,9 +179,9 @@ export const Menu = () => {
           {
             cartItemCount === 0 
             ? 
-            <Typography sx={{ fontSize: '1.4rem', fontFamily: '"Poppins", sans-serif;', color: '#000', textAlign: 'center', marginTop: '1rem' }}>
-              No hay productos en el carrito
-            </Typography>
+            <div>
+              <img src={bagSad} alt="Carrito vacío" className={styles.imageEmptyCar} />
+            </div>
             :
             <div>
               Productos
