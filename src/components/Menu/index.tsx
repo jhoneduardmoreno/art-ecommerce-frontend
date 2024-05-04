@@ -1,5 +1,5 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton, Drawer, Box, Typography, Accordion, AccordionSummary, AccordionDetails, List, ListItem, ListItemText, ListItemIcon, Badge, useMediaQuery } from '@mui/material';
+import { IconButton, Drawer, Box, Typography, Accordion, AccordionSummary, AccordionDetails, List, ListItem, ListItemText, ListItemIcon, Badge, useMediaQuery, Button } from '@mui/material';
 import styles from './Menu.module.scss';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
@@ -182,6 +182,20 @@ export const Menu = () => {
             <div className={styles.contentEmptyCar}>
               <img src={bagSad} alt="Carrito vacío" className={styles.imageEmptyCar} />
               <Typography sx={textItemsStyles} style={{textAlign: 'center'}}>Tu carrito está vacío</Typography>
+              <Button 
+                variant="contained"  
+                sx={{ 
+                  marginTop: '2rem',
+                  backgroundColor: '#7D3586',
+                  width: '60%',
+                  alignSelf: 'center',
+                  fontFamily: '"Poppins", sans-serif;',
+                  fontSize: '1.1rem',
+                }}
+                onClick={() => setOpenShoppingCart(false)}
+              >
+                Ir a la tienda
+              </Button>
             </div>
             :
             <div>
