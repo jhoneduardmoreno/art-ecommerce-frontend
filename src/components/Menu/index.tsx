@@ -14,7 +14,7 @@ export const Menu = () => {
   const isDesktop = useMediaQuery('(min-width:1024px)');
 
   const [openMenu, setOpenMenu] = useState(false);
-  const [cartItemCount, setCartItemCount] = useState(2);
+  const [cartItemCount, setCartItemCount] = useState(0);
   const [openShoppingCart, setOpenShoppingCart] = useState(false);
 
   const handleOpenMenu = () => {
@@ -175,6 +175,17 @@ export const Menu = () => {
             </IconButton>
           </Box>
           <Typography sx={titleShoppingCartStyles}>Carrito de compras</Typography>
+          {
+            cartItemCount === 0 
+            ? 
+            <Typography sx={{ fontSize: '1.4rem', fontFamily: '"Poppins", sans-serif;', color: '#000', textAlign: 'center', marginTop: '1rem' }}>
+              No hay productos en el carrito
+            </Typography>
+            :
+            <div>
+              Productos
+            </div>
+          }
         </Box>
       </Drawer>
     </div>
