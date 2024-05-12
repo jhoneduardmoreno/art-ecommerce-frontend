@@ -19,7 +19,7 @@ export const Menu = () => {
   const navigate = useNavigate();
 
   const [openMenu, setOpenMenu] = useState(false);
-  const [cartItemCount, setCartItemCount] = useState(0);
+  const [cartItemCount, setCartItemCount] = useState(1);
   const [openShoppingCart, setOpenShoppingCart] = useState(false);
 
   const handleOpenMenu = () => {
@@ -231,7 +231,15 @@ export const Menu = () => {
             </div>
             :
             <div>
-              Productos
+              {itemsCart.map((item) => (
+                <div key={item.id} className={styles.itemCart}>
+                  <img src={item.image} alt={item.name} className={styles.imageItemCart} />
+                  <div className={styles.contentTextItemCart}>
+                    <Typography sx={textItemsStyles}>{item.name}</Typography>
+                    <Typography sx={textItemsStyles}>${item.price}</Typography>
+                  </div>
+                </div>
+              ))}
             </div>
           }
         </Box>
