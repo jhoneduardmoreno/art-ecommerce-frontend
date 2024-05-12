@@ -81,7 +81,7 @@ export const Menu = () => {
       id: 1,
       name: 'Estuche celular personalizado',
       image: estuche,
-      price: 99.00,
+      price: 99.000,
       quantity: 1,
     },
     {
