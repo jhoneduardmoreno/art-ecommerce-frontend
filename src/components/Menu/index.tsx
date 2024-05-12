@@ -8,6 +8,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import bagSad from '../../assets/bag-sad.png';
+import estuche from '../../assets/car1.jpg';
+import portavasos from '../../assets/car2.jpg';
+import retrato from '../../assets/car3.jpg';
 
 
 export const Menu = () => {
@@ -71,6 +74,30 @@ export const Menu = () => {
         { id: 3, name: 'Accesorios para el hogar', path: '/' },
       ],
     },
+  ];
+
+  const itemsCart = [
+    {
+      id: 1,
+      name: 'Estuche celular personalizado',
+      image: estuche,
+      price: 99.00,
+      quantity: 1,
+    },
+    {
+      id: 2,
+      name: 'Portavasos personalizado',
+      image: portavasos,
+      price: 150.000,
+      quantity: 1,
+    },
+    {
+      id: 3,
+      name: 'retrato mascota',
+      image: retrato,
+      price: 45.000,
+      quantity: 1,
+    }
   ];
 
   const handleGoToStore = () => {
