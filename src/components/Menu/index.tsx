@@ -202,7 +202,7 @@ export const Menu = () => {
       </Drawer>
 
       <Drawer anchor="right" open={openShoppingCart} onClose={() => setOpenShoppingCart(false)}>
-        <Box sx={{ width: 250, padding: '1rem' }}>
+        <Box sx={{ width: 300, padding: '1rem' }}>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
             <IconButton onClick={() => setOpenShoppingCart(false)}>
               <CloseIcon sx={{ fontSize: '2rem', color: '#000' }} />
