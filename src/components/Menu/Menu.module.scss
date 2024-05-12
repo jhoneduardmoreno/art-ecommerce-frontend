@@ -50,12 +50,16 @@
     margin-top: 3rem;
 }
 
-// .itemCart{
-//     display: flex;
+.itemCart{
+    display: flex;
 
-// }
+}
 
 .imageItemCart{
-    width: 100px;
+    width: 50%;
     height: 100px;
+}
+
+.contentTextItemCart{
+    width: 50%;
 }
